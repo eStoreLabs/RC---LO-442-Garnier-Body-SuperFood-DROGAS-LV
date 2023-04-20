@@ -1,418 +1,1139 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Color Naturals DROGAS</title>
-    <link type="text/css" href="https://www.drogas.lt/elab/eLab/template_library/drogas/css/master.css" rel="stylesheet" media="all" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+<link type="text/css" href="https://www.drogas.lt/elab/eLab/template_library/drogas/css/master.css" rel="stylesheet"
+  media="all" />
+<!-- custom fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <div class="elab_content inpageWidthLimit">
+<!-- styles -->
+<style>
+  @charset "UTF-8";
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
 
-      <div class="es-garnier" id="es-garnier">
+  @font-face {
+    font-family: "Gotham-Book";
+    src: url("./fonts/Gotham-Book.otf") format("opentype");
+    font-display: auto;
+  }
 
-        <div class="divContainer colNoMargin">
-          <div class="es-kv">
-            <div class="es-kv__ctn es-kv__ctn-woman">
-              <img
-                src="./img/kv-woman-left.png"
-                alt=""
-                class="es-kv__womanBg"
-              />
+  @font-face {
+    font-family: "Gotham-Black";
+    src: url("./fonts/Gotham-Black-Regular.ttf") format("opentype");
+    font-display: auto;
+  }
+
+  @font-face {
+    font-family: "Gotham-Bold";
+    src: url("./fonts/Gotham-Bold.otf") format("opentype");
+    font-display: auto;
+  }
+
+  @keyframes es-slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(10%);
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  #es-garnier.es-garnier {
+    font-family: "Gotham-Book", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    max-width: 998px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    color: #111;
+    background: #fff;
+  }
+
+  #es-garnier.es-garnier img {
+    max-width: 100%;
+  }
+
+  #es-garnier.es-garnier * {
+    box-sizing: border-box;
+  }
+
+  #es-garnier.es-garnier h2,
+  #es-garnier.es-garnier h3,
+  #es-garnier.es-garnier h4,
+  #es-garnier.es-garnier h5 {
+    font-family: "Gotham-Book", Tahoma, Geneva, Verdana, sans-serif;
+    color: #111;
+  }
+
+  #es-garnier.es-garnier .es-kv {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  #es-garnier.es-garnier .es-kv__womanBg {
+    height: 100%;
+  }
+
+  #es-garnier.es-garnier .es-kv__ctn {
+    height: -moz-max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #es-garnier.es-garnier .es-kv__ctn-main {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #es-garnier.es-garnier .es-kv__logoCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  #es-garnier.es-garnier .es-kv__logoCtn::before {
+    content: "nowość";
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #095b2e;
+    color: #fff;
+    padding: 2px 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Gotham-Bold";
+  }
+
+  #es-garnier.es-garnier .es-kv__bodyLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #es-garnier.es-garnier .es-kv__logo {
+    max-width: 250px;
+  }
+
+  #es-garnier.es-garnier .es-kv__logo-superfood {
+    max-width: 500px;
+    opacity: 0;
+    animation: es-slide-in 1s forwards;
+    animation-delay: 0.8s;
+  }
+
+  #es-garnier.es-garnier .es-kv__logo-badge {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    animation: es-slide-in 1s forwards;
+    animation-delay: 0.8s;
+  }
+
+  #es-garnier.es-garnier .es-kv__packshotsCtn {
+    display: flex;
+    justify-content: center;
+  }
+
+  #es-garnier.es-garnier .es-kv__single {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0;
+  }
+
+  #es-garnier.es-garnier .es-kv__single-1 {
+    animation: es-slide-in 0.5s forwards;
+    animation-delay: 0.2s;
+  }
+
+  #es-garnier.es-garnier .es-kv__single-2 {
+    animation: es-slide-in 0.5s forwards;
+    animation-delay: 0.4s;
+  }
+
+  #es-garnier.es-garnier .es-kv__single-3 {
+    animation: es-slide-in 0.5s forwards;
+    animation-delay: 0.6s;
+  }
+
+  #es-garnier.es-garnier .es-kv__single-4 {
+    animation: es-slide-in 0.5s forwards;
+    animation-delay: 0.8s;
+  }
+
+  #es-garnier.es-garnier .es-kv__packshot {
+    height: auto;
+    min-height: 320px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #es-garnier.es-garnier .es-kv__text {
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-family: "Gotham-Bold";
+    color: #fff;
+  }
+
+  #es-garnier.es-garnier .es-kv__text-watermelon {
+    background-color: #d85865;
+  }
+
+  #es-garnier.es-garnier .es-kv__text-aloe {
+    background-color: #67c0b0;
+  }
+
+  #es-garnier.es-garnier .es-kv__text-avocado {
+    background-color: #095b2e;
+  }
+
+  #es-garnier.es-garnier .es-kv__text-cocoa {
+    background-color: #7d4b4b;
+  }
+
+  #es-garnier.es-garnier .es-green {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  #es-garnier.es-garnier .es-green__imgCtn {
+    max-width: 400px;
+  }
+
+  #es-garnier.es-garnier .es-green__img {
+    width: 100%;
+    margin-bottom: -150px;
+    margin-left: -50px;
+  }
+
+  #es-garnier.es-garnier .es-green__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 400px;
+  }
+
+  #es-garnier.es-garnier .es-green__titleCtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #es-garnier.es-garnier .es-green__line {
+    height: 80px;
+  }
+
+  #es-garnier.es-garnier .es-green__title {
+    text-transform: uppercase;
+    color: #095b2e;
+    font-family: "Gotham-Black";
+    font-size: 20px;
+  }
+
+  #es-garnier.es-garnier .es-green__text {
+    font-size: 15px;
+  }
+
+  #es-garnier.es-garnier .es-ingredients {
+    padding: 16px;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Gotham-Black";
+    font-size: 20px;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__packshot {
+    position: relative;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__packshot::before {
+    content: "przed";
+    text-transform: uppercase;
+    font-family: "Gotham-Black";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__packshot::after {
+    content: "po";
+    text-transform: uppercase;
+    font-family: "Gotham-Black";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 50px;
+    margin-top: 40px;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__img-packshot {
+    max-width: 250px;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__content p {
+    color: #095b2e;
+    font-family: "Gotham-Black";
+    font-size: 25px;
+    line-height: 0.9;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__cards {
+    margin: 22px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 460px;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__single {
+    flex: 1;
+    flex-basis: 50%;
+    margin: 8px;
+    max-width: 214px;
+    min-height: 244px;
+    padding: 8px;
+    background: #fff;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 4px 8px 32px rgba(0, 0, 0, 0.171);
+    transition: all 0.3s ease-in-out;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__single:hover {
+    transform: scale(1.05);
+  }
+
+  #es-garnier.es-garnier .es-ingredients__text {
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 12px;
+    padding-top: 16px;
+    text-align: center;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__text span {
+    font-family: "Gotham-Bold";
+    font-size: 16px;
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__cards {
+    margin: 0;
+    background: url(./img/leaf-icon.png) no-repeat center center;
+    background-size: 220px;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__cards .es-ingredients__single {
+    opacity: 1;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__cards:hover .es-ingredients__single {
+    opacity: 0.8;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__cards .es-ingredients__single:hover {
+    opacity: 1;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__disclaimer {
+    margin: 0;
+    padding: 0;
+    line-height: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    padding: 16px;
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+  }
+
+  #es-garnier.es-garnier .es-benefits {
+    margin: 50px 0;
+  }
+
+  #es-garnier.es-garnier .es-benefits__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #es-garnier.es-garnier .es-benefits__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Gotham-Black";
+    font-size: 22px;
+  }
+
+  #es-garnier.es-garnier .es-benefits__package {
+    padding: 20px 50px;
+    background-color: #f3f3f3;
+    min-width: 200px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: -50px;
+    align-items: flex-start;
+  }
+
+  #es-garnier.es-garnier .es-benefits__single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #es-garnier.es-garnier .es-benefits__single p {
+    font-size: 12px;
+  }
+
+  #es-garnier.es-garnier .es-benefits__number {
+    margin-right: 10px;
+  }
+
+  #es-garnier.es-garnier .es-benefits__packshotImg {
+    max-width: 150px;
+    margin-right: -50px;
+    z-index: 10;
+    position: relative;
+  }
+
+  #es-garnier.es-garnier .es-benefits__packshotImg:hover {
+    transform: translateX(20px);
+    transition: 0.5s ease;
+  }
+
+  #es-garnier.es-garnier .es-benefits__wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  #es-garnier.es-garnier .es-benefits__wrapper img {
+    max-width: 400px;
+    z-index: 0;
+    position: relative;
+  }
+
+  #es-garnier.es-garnier .es-benefits__elipsa {
+    position: absolute;
+    z-index: -10;
+    width: 250px;
+    height: 250px;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    bottom: -120px;
+    right: -100px;
+  }
+
+  #es-garnier.es-garnier .es-prepare {
+    margin: 50px 10px;
+  }
+
+  #es-garnier.es-garnier .es-prepare__title {
+    text-align: center;
+    font-family: "Gotham-Bold";
+    text-transform: uppercase;
+    font-size: 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  #es-garnier.es-garnier .es-prepare__mainCtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #es-garnier.es-garnier .es-prepare__single {
+    width: 280px;
+    min-height: 400px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #es-garnier.es-garnier .es-prepare__imgCtn {
+    width: 220px;
+    height: 220px;
+  }
+
+  #es-garnier.es-garnier .es-prepare__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #es-garnier.es-garnier .es-prepare__step {
+    font-family: "Gotham-Bold";
+    margin-top: 40px;
+  }
+
+  #es-garnier.es-garnier .es-prepare__desc {
+    margin-top: -10px;
+    font-size: 14px;
+    max-width: 250px;
+    min-height: 50px;
+  }
+
+  #es-garnier.es-garnier .es-eco {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  #es-garnier.es-garnier .es-eco__imgCtn {
+    max-width: 400px;
+  }
+
+  #es-garnier.es-garnier .es-eco__img {
+    width: 100%;
+  }
+
+  #es-garnier.es-garnier .es-eco__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Gotham-Black";
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  #es-garnier.es-garnier .es-eco__single {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #es-garnier.es-garnier .es-eco__icon {
+    width: 40px;
+    margin: 0 10px;
+  }
+
+  #es-garnier.es-garnier .es-eco__text {
+    width: 300px;
+  }
+
+  #es-garnier.es-garnier .es-eco__text span {
+    font-family: "Gotham-Bold";
+  }
+
+  #es-garnier.es-garnier .es-cross {
+    margin: 20px 0;
+  }
+
+  #es-garnier.es-garnier .es-cross__title {
+    text-align: center;
+    font-family: "Gotham-Black";
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  #es-garnier.es-garnier .es-cross__Ctn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #es-garnier.es-garnier .es-cross__single {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    margin: 10px;
+  }
+
+  #es-garnier.es-garnier .es-cross__name {
+    text-align: center;
+    font-family: "Gotham-Bold";
+  }
+
+  #es-garnier.es-garnier .es-cross__name-pink {
+    color: #d85865;
+  }
+
+  #es-garnier.es-garnier .es-cross__name-blue {
+    color: #67c0b0;
+  }
+
+  #es-garnier.es-garnier .es-cross__name-green {
+    color: #095b2e;
+  }
+
+  #es-garnier.es-garnier .es-cross__name-brown {
+    color: #7d4b4b;
+  }
+
+  #es-garnier.es-garnier .es-cross__subtitle {
+    text-align: center;
+    font-family: "Gotham-Bold";
+  }
+
+  #es-garnier.es-garnier .es-cross__desc {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  #es-garnier.es-garnier .es-cross__drops {
+    display: block;
+    margin: 10px auto;
+  }
+
+  #es-garnier.es-garnier .es-cross__a {
+    text-decoration: none;
+    text-align: center;
+    font-family: "Gotham-Bold";
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px 40px;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.4s ease-in-out;
+  }
+
+  #es-garnier.es-garnier .es-cross__a-pink {
+    background-color: #d85865;
+  }
+
+  #es-garnier.es-garnier .es-cross__a-pink:hover {
+    color: #d85865;
+    outline: 3px solid #d85865;
+    background-color: #fff;
+  }
+
+  #es-garnier.es-garnier .es-cross__a-blue {
+    background-color: #67c0b0;
+  }
+
+  #es-garnier.es-garnier .es-cross__a-blue:hover {
+    color: #67c0b0;
+    outline: 3px solid #67c0b0;
+    background-color: #fff;
+  }
+
+  #es-garnier.es-garnier .es-cross__a-green {
+    background-color: #095b2e;
+  }
+
+  #es-garnier.es-garnier .es-cross__a-green:hover {
+    color: #095b2e;
+    outline: 3px solid #095b2e;
+    background-color: #fff;
+  }
+
+  #es-garnier.es-garnier .es-cross__a-brown {
+    background-color: #7d4b4b;
+  }
+
+  #es-garnier.es-garnier .es-cross__a-brown:hover {
+    color: #7d4b4b;
+    outline: 3px solid #7d4b4b;
+    background-color: #fff;
+  }
+
+  #es-garnier.es-garnier .es-cross__imgCtn {
+    width: 100%;
+  }
+
+  #es-garnier.es-garnier .es-cross__imgCtn img {
+    width: auto;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #es-garnier.es-garnier .es-claims {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  #es-garnier.es-garnier .es-claims__text {
+    font-size: 11px;
+    margin: 5px 0;
+    padding: 0;
+  }
+
+  #es-garnier.es-garnier .es-footer {
+    width: 100%;
+    margin: 0;
+  }
+
+  #es-garnier.es-garnier .es-footer img {
+    max-width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    #es-garnier.es-garnier .es-kv__ctn-woman {
+      display: none;
+    }
+  }
+
+  @media (max-width: 650px) {
+    #es-garnier.es-garnier .es-kv__ctn-woman {
+      display: none;
+    }
+
+    #es-garnier.es-garnier .es-kv__logo {
+      max-width: 200px;
+    }
+
+    #es-garnier.es-garnier .es-kv__logo-superfood {
+      max-width: 300px;
+    }
+
+    #es-garnier.es-garnier .es-kv__single {
+      width: 100px;
+    }
+
+    #es-garnier.es-garnier .es-kv__packshot {
+      min-height: 180px;
+      height: 100px;
+    }
+
+    #es-garnier.es-garnier .es-kv__text {
+      font-size: 9px;
+    }
+
+    #es-garnier.es-garnier .es-green__imgCtn {
+      max-width: 300px;
+    }
+
+    #es-garnier.es-garnier .es-green__img {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+
+    #es-garnier.es-garnier .es-green__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 300px;
+    }
+
+    #es-garnier.es-garnier .es-ingredients {
+      background-image: none;
+    }
+
+    #es-garnier.es-garnier .es-ingredients__packshot {
+      margin-bottom: 80px;
+    }
+
+    #es-garnier.es-garnier .es-prepare__desc {
+      font-size: 14px;
+    }
+
+    #es-garnier.es-garnier .es-prepare__single {
+      align-items: center;
+      justify-content: center;
+    }
+
+    #es-garnier.es-garnier .es-benefits__package {
+      margin-right: 0;
+      width: 100%;
+    }
+
+    #es-garnier.es-garnier .es-benefits__packshotImg {
+      display: none;
+    }
+
+    #es-garnier.es-garnier .es-eco__line {
+      display: none;
+    }
+  }
+</style>
+
+<div class="elab_content inpageWidthLimit">
+
+  <div class="es-garnier" id="es-garnier">
+
+    <div class="divContainer colNoMargin">
+      <div class="es-kv">
+        <div class="es-kv__ctn es-kv__ctn-woman">
+          <img src="./img/kv-woman-left.png" alt="" class="es-kv__womanBg" />
+        </div>
+        <div class="es-kv__ctn es-kv__ctn-main">
+          <div class="es-kv__logoCtn">
+            <img src="./img/garnier-logo.png" alt="" class="es-kv__logo" />
+            <div class="es-kv__bodyLogo">
+              <img src="./img/superfood-logo.png" alt="" class="es-kv__logo es-kv__logo-superfood" />
+              <img src="./img/kv-badge.png" alt="" class="es-kv__logo es-kv__logo-badge" />
             </div>
-            <div class="es-kv__ctn es-kv__ctn-main">
-              <div class="es-kv__logoCtn">
-                <img src="./img/garnier-logo.png" alt="" class="es-kv__logo" />
-                <div class="es-kv__bodyLogo">
-                  <img
-                    src="./img/superfood-logo.png"
-                    alt=""
-                    class="es-kv__logo es-kv__logo-superfood"
-                  />
-                  <img
-                    src="./img/kv-badge.png"
-                    alt=""
-                    class="es-kv__logo es-kv__logo-badge"
-                  />
-                </div>
-              </div>
-              <div class="es-kv__packshotsCtn">
-                <div class="es-kv__single es-kv__single-1">
-                  <img
-                    src="./img/kv-packshot-watermelon.png"
-                    alt=""
-                    class="es-kv__packshot"
-                  />
-                  <p class="es-kv__text es-kv__text-watermelon">nawilża</p>
-                </div>
-
-                <div class="es-kv__single es-kv__single-2">
-                  <img
-                    src="./img/kv-packshot-aloe.png"
-                    alt=""
-                    class="es-kv__packshot"
-                  />
-                  <p class="es-kv__text es-kv__text-aloe">koi</p>
-                </div>
-
-                <div class="es-kv__single es-kv__single-3">
-                  <img
-                    src="./img/kv-packshot-avocado.png"
-                    alt=""
-                    class="es-kv__packshot"
-                  />
-                  <p class="es-kv__text es-kv__text-avocado">odżywia</p>
-                </div>
-
-                <div class="es-kv__single es-kv__single-4">
-                  <img
-                    src="./img/kv-packshot-cocoa.png"
-                    alt=""
-                    class="es-kv__packshot"
-                  />
-                  <p class="es-kv__text es-kv__text-cocoa">regeneruje</p>
-                </div>
-              </div>
+          </div>
+          <div class="es-kv__packshotsCtn">
+            <div class="es-kv__single es-kv__single-1">
+              <img src="./img/kv-packshot-watermelon.png" alt="" class="es-kv__packshot" />
+              <p class="es-kv__text es-kv__text-watermelon">nawilża</p>
             </div>
-            <div class="es-kv__ctn es-kv__ctn-woman">
-              <img
-                src="./img/kv-woman-right.png"
-                alt=""
-                class="es-kv__womanBg"
-              />
+
+            <div class="es-kv__single es-kv__single-2">
+              <img src="./img/kv-packshot-aloe.png" alt="" class="es-kv__packshot" />
+              <p class="es-kv__text es-kv__text-aloe">koi</p>
+            </div>
+
+            <div class="es-kv__single es-kv__single-3">
+              <img src="./img/kv-packshot-avocado.png" alt="" class="es-kv__packshot" />
+              <p class="es-kv__text es-kv__text-avocado">odżywia</p>
+            </div>
+
+            <div class="es-kv__single es-kv__single-4">
+              <img src="./img/kv-packshot-cocoa.png" alt="" class="es-kv__packshot" />
+              <p class="es-kv__text es-kv__text-cocoa">regeneruje</p>
             </div>
           </div>
         </div>
-
-        <div class="divContainer colNoMargin">
-          <div class="es-green">
-          <div class="es-green__imgCtn">
-            <img src="./img/capsules.png" alt="" class="es-green__img" />
-          </div>
-          <div class="es-green__content">
-            <div class="es-green__titleCtn">
-              <img src="./img/line-left.png" alt="" class="es-green__line" />
-              <p class="es-green__title">zielona nauka</p>
-              <img src="./img/line-right.png" alt="" class="es-green__line" />
-            </div>
-            <div class="es-green__textCtn">
-              <p class="es-green__text">
-                W Garnier wierzymy, że <i>Zielona Nauka</i> jest przyszłością
-                branży kosmetycznej. Procesy naukowe, szeroko znane jako
-                <i>“Zielona Chemia”</i>, pozwalają nam tworzyć formuły o
-                maksymalnej skuteczności i zredukowanym wpływie na planetę.
-              </p>
-              <p class="es-green__text">
-                Formuły Garnier Body Superfood zasilane są
-                <i>Zieloną Nauką </i> przy wykorzystaniu technologii polegającej
-                na odpowiednim mieszaniu różnych składników nawilżających i
-                odżywczych, otrzymywanych właśnie w procesie
-                <i>Zielonej Chemii</i>.
-              </p>
-            </div>
-          </div>
-          </div>
+        <div class="es-kv__ctn es-kv__ctn-woman">
+          <img src="./img/kv-woman-right.png" alt="" class="es-kv__womanBg" />
         </div>
-
-        <div class="divContainer colNoMargin">
-          <div class="es-ingredients">
-          <div class="es-ingredients__container">
-            <div class="es-ingredients__content">
-              <div class="es-ingredients__packshot">
-                <img
-                  src="./img/circle.png"
-                  alt=""
-                  class="es-ingredients__img es-ingredients__img-packshot"
-                />
-              </div>
-            </div>
-            <div class="es-ingredients__cards">
-              <div class="es-ingredients__single">
-                <div class="es-ingredients__icon">
-                  <img
-                    src="img/icon-1.png"
-                    alt=""
-                    class="es-ingredients__img"
-                  />
-                </div>
-                <p class="es-ingredients__text">
-                  <span>Formuła</span>
-                  Formuła biodegradowalna do 98,5%. Szybko się wchłania.
-                </p>
-              </div>
-              <div class="es-ingredients__single">
-                <div class="es-ingredients__icon">
-                  <img
-                    src="img/icon-2.png"
-                    alt=""
-                    class="es-ingredients__img"
-                  />
-                </div>
-                <p class="es-ingredients__text">
-                  <span>Bezpieczeństwo</span> <br />
-                  Testowane pod kontrolą dermatologiczną. Odpowiednie również
-                  dla skóry wrażliwej.
-                </p>
-              </div>
-              <div class="es-ingredients__single">
-                <div class="es-ingredients__icon">
-                  <img
-                    src="img/icon-3.png"
-                    alt=""
-                    class="es-ingredients__img"
-                  />
-                </div>
-                <p class="es-ingredients__text">
-                  <span>Składniki</span>
-                  Do 97% składników pochodzenia naturalnego. Połączenie
-                  składników aktywnych i superowoców.
-                </p>
-              </div>
-              <div class="es-ingredients__single">
-                <div class="es-ingredients__icon">
-                  <img
-                    src="img/icon-4.png"
-                    alt=""
-                    class="es-ingredients__img"
-                  />
-                </div>
-                <p class="es-ingredients__text">
-                  <span>Rezultaty</span>
-                  Wszystkie formuły zostały przetestowane przy użyciu
-                  Corneometer* i udowodniono, że nawilżają skórę przez 48h*.
-                  Skóra jest nawilżona aż do 10 warstw w głąb naskórka**.
-                </p>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <div class="divContainer colNoMargin">
-        <div class="es-benefits">
-          <div class="es-benefits__container">
-            <div class="es-benefits__package">
-              <h3 class="es-benefits__title">natychmiastowe rezultaty</h3>
-              <div class="es-benefits__single">
-                <div class="es-benefits__number">
-                  <img src="./img/check-icon.png" alt="" />
-                </div>
-                <p>Odżywienie</p>
-              </div>
-        
-              <div class="es-benefits__single">
-                <div class="es-benefits__number">
-                  <img src="./img/check-icon.png" alt="" />
-                </div>
-                <p>Nawilżenie aż do 48h* aż do 10 warstw w głąb naskórka**</p>
-              </div>
-        
-              <div class="es-benefits__single">
-                <div class="es-benefits__number">
-                  <img src="./img/check-icon.png" alt="" />
-                </div>
-                <p>Wzmocniona bariera ochronna skóry</p>
-              </div>
-            </div>
-            <div class="es-benefits__packshot">
-              <img src="./img/capsule.png" alt="" class="es-benefits__packshotImg" />
-            </div>
-            <div class="es-benefits__effect">
-              <div class="es-benefits__wrapper">
-                <img src="./img/products-img.png" alt="" />
-                <div class="es-benefits__elipsa"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-
-        <div class="divContainer colNoMargin">
-          <div class="es-prepare">
-            <p class="es-prepare__title">sposób użycia</p>
-            <div class="es-prepare__mainCtn">
-        
-              <div class="es-prepare__single">
-                <div class="es-prepare__imgCtn">
-                  <img src="./img/step-1.png" alt="" class="es-prepare__img" />
-                </div>
-                <p class="es-prepare__step">Krok 1</p>
-                <p class="es-prepare__desc">Nałóż obficie na skórę ciała.</p>
-              </div>
-        
-              <div class="es-prepare__single">
-                <div class="es-prepare__imgCtn">
-                  <img src="./img/step-2.png" alt="" class="es-prepare__img" />
-                </div>
-                <p class="es-prepare__step">Krok 2</p>
-                <p class="es-prepare__desc">
-                  Wmasuj okrężnymi ruchami aż do wchłonięcia.
-                </p>
-              </div>
-        
-              <div class="es-prepare__single">
-                <div class="es-prepare__imgCtn">
-                  <img src="./img/step-3.png" alt="" class="es-prepare__img" />
-                </div>
-                <p class="es-prepare__step">Krok 3</p>
-                <p class="es-prepare__desc">Ciesz się nawilżoną skórę na 48H!*</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="divContainer colNoMargin">
-          <div class="es-eco">
-          <div class="es-eco__imgCtn">
-            <img src="./img/eco.png" alt="" class="es-eco__img" />
-          </div>
-          <div class="es-eco__content">
-            <p class="es-eco__title">balsamy eco-odpowiedzialne!</p>
-            <div class="es-eco__single">
-              <img src="./img/line-1.png" alt="" class="es-eco__line" />
-              <img src="./img/eco-icon-1.png" alt="" class="es-eco__icon" />
-              <p class="es-eco__text">
-                96% składników pochodzenia <br />
-                naturalnego.
-              </p>
-            </div>
-
-            <div class="es-eco__single">
-              <img src="./img/line-2.png" alt="" class="es-eco__line" />
-              <img src="./img/eco-icon-1.png" alt="" class="es-eco__icon" />
-              <p class="es-eco__text">
-                Nie posiada składników pochodzenia <br />
-                zwierzęcego i ich pochodnych
-              </p>
-            </div>
-
-            <div class="es-eco__single">
-              <img src="./img/line-3.png" alt="" class="es-eco__line" />
-              <img src="./img/eco-icon-2.png" alt="" class="es-eco__icon" />
-              <p class="es-eco__text">
-                Marka Garnier została oficjalnie <br />
-                zatwierdzona przez
-                <span
-                  >Cruelty Free <br />
-                  International</span
-                >
-                w ramach programu <br />
-                <span>Leaping Bunny.</span>
-              </p>
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <div class="divContainer colNoMargin">
-          <div class="es-cross">
-          <p class="es-cross__title">Poznaj balsamy garnier body superfoods</p>
-          <div class="es-cross__Ctn">
-            <div class="es-cross__single">
-              <div class="es-cross__imgCtn">
-                <img src="./img/cross-1.png" alt="" class="es-cross__img" />
-              </div>
-              <div class="es-cross__content">
-                <p class="es-cross__name es-cross__name-pink">
-                  Ekstrakt z arbuza <br />
-                  + kwas hialuronowy
-                </p>
-                <p class="es-cross__subtitle">Nawilżający żel-krem</p>
-                <p class="es-cross__desc">Skóra odwodniona</p>
-                <img src="./img/drops-1.png" alt="" class="es-cross__drops" />
-              </div>
-              <a
-                href="#"
-                target="_blank"
-                class="es-cross__a es-cross__a-pink"
-                >Odkryj</a
-              >
-            </div>
-
-            <div class="es-cross__single">
-              <div class="es-cross__imgCtn">
-                <img src="./img/cross-2.png" alt="" class="es-cross__img" />
-              </div>
-              <div class="es-cross__content">
-                <p class="es-cross__name es-cross__name-blue">
-                  Ekstrakt z aloesu <br />
-                  + sól magnezowa
-                </p>
-                <p class="es-cross__subtitle">Kojący krem</p>
-                <p class="es-cross__desc">Skóra normalna i sucha</p>
-                <img src="./img/drops-2.png" alt="" class="es-cross__drops" />
-              </div>
-              <a
-                href="#"
-                target="_blank"
-                class="es-cross__a es-cross__a-blue"
-                >Odkryj</a
-              >
-            </div>
-
-            <div class="es-cross__single">
-              <div class="es-cross__imgCtn">
-                <img src="./img/cross-3.png" alt="" class="es-cross__img" />
-              </div>
-              <div class="es-cross__content">
-                <p class="es-cross__name es-cross__name-green">
-                  Olejek z awokado <br />
-                  + kwas Omega 6
-                </p>
-                <p class="es-cross__subtitle">Odżywyczy krem</p>
-                <p class="es-cross__desc">Skóra sucha i bardzo sucha</p>
-                <img src="./img/drops-3.png" alt="" class="es-cross__drops" />
-              </div>
-              <a
-                href="#"
-                target="_blank"
-                class="es-cross__a es-cross__a-green"
-                >Odkryj</a
-              >
-            </div>
-
-            <div class="es-cross__single">
-              <div class="es-cross__imgCtn">
-                <img src="./img/cross-4.png" alt="" class="es-cross__img" />
-              </div>
-              <div class="es-cross__content">
-                <p class="es-cross__name es-cross__name-brown">
-                  Masło kakaowe <br />
-                  + ceramidy
-                </p>
-                <p class="es-cross__subtitle">Regenerujące masło</p>
-                <p class="es-cross__desc">Skóra ekstremalnie sucha</p>
-                <img src="./img/drops-4.png" alt="" class="es-cross__drops" />
-              </div>
-              <a
-                href="#"
-                target="_blank"
-                class="es-cross__a es-cross__a-brown"
-                >Odkryj</a
-              >
-            </div>
-          </div>
-          </div>
-        </div>
-
-        <div class="divContainer colNoMargin">
-          <div class="es-claims">
-          <p class="es-claims__text">*Test instrumentalny na 24 ochotnikach</p>
-          <p class="es-claims__text">**Górne warstwy komórkowe naskórka</p>
-          </div>
-        </div>
-
-        <div class="divContainer colNoMargin">
-          <div class="es-footer">
-          <img src="./img/footer.png" alt="" />
-          </div>
-        </div>
-
       </div>
     </div>
 
-  </body>
-</html>
+    <div class="divContainer colNoMargin">
+      <div class="es-green">
+        <div class="es-green__imgCtn">
+          <img src="./img/capsules.png" alt="" class="es-green__img" />
+        </div>
+        <div class="es-green__content">
+          <div class="es-green__titleCtn">
+            <img src="./img/line-left.png" alt="" class="es-green__line" />
+            <p class="es-green__title">zielona nauka</p>
+            <img src="./img/line-right.png" alt="" class="es-green__line" />
+          </div>
+          <div class="es-green__textCtn">
+            <p class="es-green__text">
+              W Garnier wierzymy, że <i>Zielona Nauka</i> jest przyszłością
+              branży kosmetycznej. Procesy naukowe, szeroko znane jako
+              <i>“Zielona Chemia”</i>, pozwalają nam tworzyć formuły o
+              maksymalnej skuteczności i zredukowanym wpływie na planetę.
+            </p>
+            <p class="es-green__text">
+              Formuły Garnier Body Superfood zasilane są
+              <i>Zieloną Nauką </i> przy wykorzystaniu technologii polegającej
+              na odpowiednim mieszaniu różnych składników nawilżających i
+              odżywczych, otrzymywanych właśnie w procesie
+              <i>Zielonej Chemii</i>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divContainer colNoMargin">
+      <div class="es-ingredients">
+        <div class="es-ingredients__container">
+          <div class="es-ingredients__content">
+            <div class="es-ingredients__packshot">
+              <img src="./img/circle.png" alt="" class="es-ingredients__img es-ingredients__img-packshot" />
+            </div>
+          </div>
+          <div class="es-ingredients__cards">
+            <div class="es-ingredients__single">
+              <div class="es-ingredients__icon">
+                <img src="img/icon-1.png" alt="" class="es-ingredients__img" />
+              </div>
+              <p class="es-ingredients__text">
+                <span>Formuła</span>
+                Formuła biodegradowalna do 98,5%. Szybko się wchłania.
+              </p>
+            </div>
+            <div class="es-ingredients__single">
+              <div class="es-ingredients__icon">
+                <img src="img/icon-2.png" alt="" class="es-ingredients__img" />
+              </div>
+              <p class="es-ingredients__text">
+                <span>Bezpieczeństwo</span> <br />
+                Testowane pod kontrolą dermatologiczną. Odpowiednie również
+                dla skóry wrażliwej.
+              </p>
+            </div>
+            <div class="es-ingredients__single">
+              <div class="es-ingredients__icon">
+                <img src="img/icon-3.png" alt="" class="es-ingredients__img" />
+              </div>
+              <p class="es-ingredients__text">
+                <span>Składniki</span>
+                Do 97% składników pochodzenia naturalnego. Połączenie
+                składników aktywnych i superowoców.
+              </p>
+            </div>
+            <div class="es-ingredients__single">
+              <div class="es-ingredients__icon">
+                <img src="img/icon-4.png" alt="" class="es-ingredients__img" />
+              </div>
+              <p class="es-ingredients__text">
+                <span>Rezultaty</span>
+                Wszystkie formuły zostały przetestowane przy użyciu
+                Corneometer* i udowodniono, że nawilżają skórę przez 48h*.
+                Skóra jest nawilżona aż do 10 warstw w głąb naskórka**.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divContainer colNoMargin">
+      <div class="es-benefits">
+        <div class="es-benefits__container">
+          <div class="es-benefits__package">
+            <h3 class="es-benefits__title">natychmiastowe rezultaty</h3>
+            <div class="es-benefits__single">
+              <div class="es-benefits__number">
+                <img src="./img/check-icon.png" alt="" />
+              </div>
+              <p>Odżywienie</p>
+            </div>
+
+            <div class="es-benefits__single">
+              <div class="es-benefits__number">
+                <img src="./img/check-icon.png" alt="" />
+              </div>
+              <p>Nawilżenie aż do 48h* aż do 10 warstw w głąb naskórka**</p>
+            </div>
+
+            <div class="es-benefits__single">
+              <div class="es-benefits__number">
+                <img src="./img/check-icon.png" alt="" />
+              </div>
+              <p>Wzmocniona bariera ochronna skóry</p>
+            </div>
+          </div>
+          <div class="es-benefits__packshot">
+            <img src="./img/capsule.png" alt="" class="es-benefits__packshotImg" />
+          </div>
+          <div class="es-benefits__effect">
+            <div class="es-benefits__wrapper">
+              <img src="./img/products-img.png" alt="" />
+              <div class="es-benefits__elipsa"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divContainer colNoMargin">
+      <div class="es-prepare">
+        <p class="es-prepare__title">sposób użycia</p>
+        <div class="es-prepare__mainCtn">
+
+          <div class="es-prepare__single">
+            <div class="es-prepare__imgCtn">
+              <img src="./img/step-1.png" alt="" class="es-prepare__img" />
+            </div>
+            <p class="es-prepare__step">Krok 1</p>
+            <p class="es-prepare__desc">Nałóż obficie na skórę ciała.</p>
+          </div>
+
+          <div class="es-prepare__single">
+            <div class="es-prepare__imgCtn">
+              <img src="./img/step-2.png" alt="" class="es-prepare__img" />
+            </div>
+            <p class="es-prepare__step">Krok 2</p>
+            <p class="es-prepare__desc">
+              Wmasuj okrężnymi ruchami aż do wchłonięcia.
+            </p>
+          </div>
+
+          <div class="es-prepare__single">
+            <div class="es-prepare__imgCtn">
+              <img src="./img/step-3.png" alt="" class="es-prepare__img" />
+            </div>
+            <p class="es-prepare__step">Krok 3</p>
+            <p class="es-prepare__desc">Ciesz się nawilżoną skórę na 48H!*</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divContainer colNoMargin">
+      <div class="es-eco">
+        <div class="es-eco__imgCtn">
+          <img src="./img/eco.png" alt="" class="es-eco__img" />
+        </div>
+        <div class="es-eco__content">
+          <p class="es-eco__title">balsamy eco-odpowiedzialne!</p>
+          <div class="es-eco__single">
+            <img src="./img/line-1.png" alt="" class="es-eco__line" />
+            <img src="./img/eco-icon-1.png" alt="" class="es-eco__icon" />
+            <p class="es-eco__text">
+              96% składników pochodzenia <br />
+              naturalnego.
+            </p>
+          </div>
+
+          <div class="es-eco__single">
+            <img src="./img/line-2.png" alt="" class="es-eco__line" />
+            <img src="./img/eco-icon-1.png" alt="" class="es-eco__icon" />
+            <p class="es-eco__text">
+              Nie posiada składników pochodzenia <br />
+              zwierzęcego i ich pochodnych
+            </p>
+          </div>
+
+          <div class="es-eco__single">
+            <img src="./img/line-3.png" alt="" class="es-eco__line" />
+            <img src="./img/eco-icon-2.png" alt="" class="es-eco__icon" />
+            <p class="es-eco__text">
+              Marka Garnier została oficjalnie <br />
+              zatwierdzona przez
+              <span>Cruelty Free <br />
+                International</span>
+              w ramach programu <br />
+              <span>Leaping Bunny.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divContainer colNoMargin">
+      <div class="es-cross">
+        <p class="es-cross__title">Poznaj balsamy garnier body superfoods</p>
+        <div class="es-cross__Ctn">
+          <div class="es-cross__single">
+            <div class="es-cross__imgCtn">
+              <img src="./img/cross-1.png" alt="" class="es-cross__img" />
+            </div>
+            <div class="es-cross__content">
+              <p class="es-cross__name es-cross__name-pink">
+                Ekstrakt z arbuza <br />
+                + kwas hialuronowy
+              </p>
+              <p class="es-cross__subtitle">Nawilżający żel-krem</p>
+              <p class="es-cross__desc">Skóra odwodniona</p>
+              <img src="./img/drops-1.png" alt="" class="es-cross__drops" />
+            </div>
+            <a href="#" target="_blank" class="es-cross__a es-cross__a-pink">Odkryj</a>
+          </div>
+
+          <div class="es-cross__single">
+            <div class="es-cross__imgCtn">
+              <img src="./img/cross-2.png" alt="" class="es-cross__img" />
+            </div>
+            <div class="es-cross__content">
+              <p class="es-cross__name es-cross__name-blue">
+                Ekstrakt z aloesu <br />
+                + sól magnezowa
+              </p>
+              <p class="es-cross__subtitle">Kojący krem</p>
+              <p class="es-cross__desc">Skóra normalna i sucha</p>
+              <img src="./img/drops-2.png" alt="" class="es-cross__drops" />
+            </div>
+            <a href="#" target="_blank" class="es-cross__a es-cross__a-blue">Odkryj</a>
+          </div>
+
+          <div class="es-cross__single">
+            <div class="es-cross__imgCtn">
+              <img src="./img/cross-3.png" alt="" class="es-cross__img" />
+            </div>
+            <div class="es-cross__content">
+              <p class="es-cross__name es-cross__name-green">
+                Olejek z awokado <br />
+                + kwas Omega 6
+              </p>
+              <p class="es-cross__subtitle">Odżywyczy krem</p>
+              <p class="es-cross__desc">Skóra sucha i bardzo sucha</p>
+              <img src="./img/drops-3.png" alt="" class="es-cross__drops" />
+            </div>
+            <a href="#" target="_blank" class="es-cross__a es-cross__a-green">Odkryj</a>
+          </div>
+
+          <div class="es-cross__single">
+            <div class="es-cross__imgCtn">
+              <img src="./img/cross-4.png" alt="" class="es-cross__img" />
+            </div>
+            <div class="es-cross__content">
+              <p class="es-cross__name es-cross__name-brown">
+                Masło kakaowe <br />
+                + ceramidy
+              </p>
+              <p class="es-cross__subtitle">Regenerujące masło</p>
+              <p class="es-cross__desc">Skóra ekstremalnie sucha</p>
+              <img src="./img/drops-4.png" alt="" class="es-cross__drops" />
+            </div>
+            <a href="#" target="_blank" class="es-cross__a es-cross__a-brown">Odkryj</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divContainer colNoMargin">
+      <div class="es-claims">
+        <p class="es-claims__text">*Test instrumentalny na 24 ochotnikach</p>
+        <p class="es-claims__text">**Górne warstwy komórkowe naskórka</p>
+      </div>
+    </div>
+
+    <div class="divContainer colNoMargin">
+      <div class="es-footer">
+        <img src="./img/footer.png" alt="" />
+      </div>
+    </div>
+
+  </div>
+</div>
