@@ -536,7 +536,7 @@
   display: block;
   margin: 10px auto;
 }
-#es-garnier.es-garnier .es-cross__link {
+#es-garnier.es-garnier .es-cross__a {
   text-decoration: none;
   text-align: center;
   font-family: "Gotham-Bold";
@@ -547,34 +547,34 @@
   color: #fff;
   transition: 0.4s ease-in-out;
 }
-#es-garnier.es-garnier .es-cross__link-pink {
+#es-garnier.es-garnier .es-cross__a-pink {
   background-color: #d85865;
 }
-#es-garnier.es-garnier .es-cross__link-pink:hover {
+#es-garnier.es-garnier .es-cross__a-pink:hover {
   color: #d85865;
   outline: 3px solid #d85865;
   background-color: #fff;
 }
-#es-garnier.es-garnier .es-cross__link-blue {
+#es-garnier.es-garnier .es-cross__a-blue {
   background-color: #67c0b0;
 }
-#es-garnier.es-garnier .es-cross__link-blue:hover {
+#es-garnier.es-garnier .es-cross__a-blue:hover {
   color: #67c0b0;
   outline: 3px solid #67c0b0;
   background-color: #fff;
 }
-#es-garnier.es-garnier .es-cross__link-green {
+#es-garnier.es-garnier .es-cross__a-green {
   background-color: #095b2e;
 }
-#es-garnier.es-garnier .es-cross__link-green:hover {
+#es-garnier.es-garnier .es-cross__a-green:hover {
   color: #095b2e;
   outline: 3px solid #095b2e;
   background-color: #fff;
 }
-#es-garnier.es-garnier .es-cross__link-brown {
+#es-garnier.es-garnier .es-cross__a-brown {
   background-color: #7d4b4b;
 }
-#es-garnier.es-garnier .es-cross__link-brown:hover {
+#es-garnier.es-garnier .es-cross__a-brown:hover {
   color: #7d4b4b;
   outline: 3px solid #7d4b4b;
   background-color: #fff;
