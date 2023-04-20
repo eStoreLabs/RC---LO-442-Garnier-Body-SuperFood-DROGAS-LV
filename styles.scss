@@ -95,7 +95,7 @@ $black: #000;
       height: max-content;
       display: flex;
       flex-direction: column;
-      &--main{
+      &-main{
         justify-content: space-between;
         align-items:center;
       }
@@ -130,13 +130,13 @@ $black: #000;
     &__logo{
       max-width: 250px;
      
-      &--superfood{
+      &-superfood{
         max-width: 500px;
         opacity: 0;
         animation:  es-slide-in 1s forwards;
         animation-delay: .8s;
       }
-      &--badge{
+      &-badge{
         width: 80px;
         height: 80px;
         opacity: 0;
@@ -156,19 +156,19 @@ $black: #000;
       justify-content: center;
       align-items: flex-end;
       opacity: 0;
-      &--1{
+      &-1{
         animation:  es-slide-in .5s forwards;
         animation-delay: .2s;
       }
-      &--2{
+      &-2{
         animation:  es-slide-in .5s forwards;
         animation-delay: .4s;
       }
-      &--3{
+      &-3{
         animation:  es-slide-in .5s forwards;
         animation-delay: .6s;
       }
-      &--4{
+      &-4{
         animation:  es-slide-in .5s forwards;
         animation-delay: .8s;
       }
@@ -190,16 +190,16 @@ $black: #000;
       letter-spacing: 1px;
       font-family: $Bold;
       color: #fff;
-      &--watermelon{
+      &-watermelon{
         background-color: $pink;
       }
-      &--aloe{
+      &-aloe{
         background-color: $aloe;
       }
-      &--avocado{
+      &-avocado{
         background-color: $primary;
       }
-      &--cocoa{
+      &-cocoa{
         background-color: $cocoa;
       }
     }
@@ -284,7 +284,7 @@ $black: #000;
       @include img;
       max-width: 50px;
       margin-top: 40px;
-      &--packshot{
+      &-packshot{
         max-width: 250px;
       }
     }
@@ -539,16 +539,16 @@ $black: #000;
     &__name{
       text-align: center;
       font-family: $Bold;
-      &--pink{
+      &-pink{
         color: $pink;
       }
-      &--blue{
+      &-blue{
         color:$aloe;
       }
-      &--green{
+      &-green{
         color:$primary;
       }
-      &--brown{
+      &-brown{
         color: $cocoa;
       }
     }
@@ -574,7 +574,7 @@ $black: #000;
       border-radius: 10px;
       color: #fff;
       transition: .4s ease-in-out;
-      &--pink{
+      &-pink{
         background-color: $pink;
         &:hover{
           color: $pink;
@@ -582,7 +582,7 @@ $black: #000;
           background-color: #fff;
         }
       }
-      &--blue{
+      &-blue{
         background-color:$aloe;
         &:hover{
           color: $aloe;
@@ -590,7 +590,7 @@ $black: #000;
           background-color: #fff;
         }
       }
-      &--green{
+      &-green{
         background-color:$primary;
         &:hover{
           color: $primary;
@@ -598,7 +598,7 @@ $black: #000;
           background-color: #fff;
         }
       }
-      &--brown{
+      &-brown{
         background-color: $cocoa;
         &:hover{
           color: $cocoa;
@@ -640,7 +640,7 @@ $black: #000;
   #es-garnier.es-garnier {
     .es-kv{
       &__ctn{
-       &--woman{
+       &-woman{
          display: none;
        }
       }
@@ -651,13 +651,13 @@ $black: #000;
     #es-garnier.es-garnier {
         .es-kv{
            &__ctn{
-            &--woman{
+            &-woman{
               display: none;
             }
            }
            &__logo{
             max-width: 200px;
-            &--superfood{
+            &-superfood{
               max-width: 300px;
             }
            }
