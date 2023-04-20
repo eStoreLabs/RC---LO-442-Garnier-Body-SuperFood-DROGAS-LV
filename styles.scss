@@ -433,6 +433,7 @@ $black: #000;
     }
   }
   
+  /* prepare section */
   .es-prepare{
     margin: 50px 10px;
     &__title{
@@ -477,6 +478,7 @@ $black: #000;
         min-height: 50px;
     }
   }
+
   .es-eco{
     display: flex;
     flex-wrap: wrap-reverse;
@@ -513,6 +515,7 @@ $black: #000;
       }
     }
   }
+
   .es-cross{
     margin:20px 0;
     &__title{
