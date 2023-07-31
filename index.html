@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <link type="text/css" href="https://www.drogas.lt/elab/eLab/template_library/drogas/css/master.css" rel="stylesheet"
   media="all" />
 <!-- custom fonts -->
@@ -235,6 +237,7 @@
   #es-garnier.es-garnier .es-green__title {
     text-transform: uppercase;
     color: #095b2e;
+    font-family: "Montserrat";
     font-weight: 900;
     font-size: 20px;
   }
@@ -406,8 +409,8 @@
   #es-garnier.es-garnier .es-benefits__title {
     text-align: center;
     text-transform: uppercase;
+    font-family: "Montserrat";
     font-weight: 900;
-    color: #095b2e;
     font-size: 22px;
   }
 
@@ -448,21 +451,14 @@
     transform: translateX(20px);
     transition: 0.5s ease;
   }
-
-  #es-garnier.es-garnier .es-benefits__wrapper {
+  #es-garnier.es-garnier .es-benefits__effect {
     position: relative;
-    z-index: 1;
-  }
-
-  #es-garnier.es-garnier .es-benefits__wrapper img {
-    max-width: 400px;
     z-index: 0;
-    position: relative;
   }
-
-  #es-garnier.es-garnier .es-benefits__elipsa {
+  #es-garnier.es-garnier .es-benefits__effect ::after{
     position: absolute;
-    z-index: -10;
+    z-index: -1;
+    content: "";
     width: 250px;
     height: 250px;
     background-color: #f3f3f3;
@@ -470,6 +466,75 @@
     bottom: -120px;
     right: -100px;
   }
+  #es-garnier.es-garnier .es-benefits__wrapper {
+    /* position: relative; */
+    height: 218px;
+    width: 100vw;
+    flex-basis: 50%;
+    z-index: 1;
+    background-image: url("./img/bg-results.png");
+    background-size: cover;
+    display: grid;
+    place-items: center;
+  }
+  
+
+  #es-garnier.es-garnier .es-benefits__bg {
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    background-color: rgba(9, 91, 46, 0.89);
+    width: 70%;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+@media (min-width: 650px) {
+    #es-garnier.es-garnier .es-benefits__wrapper {
+      width: 400px;
+      justify-items: start;
+      align-items: center;
+    }
+
+    #es-garnier.es-garnier .es-benefits__bg {
+      width: 75%;
+      margin-left: 10%;
+    }
+  }
+  #es-garnier.es-garnier .es-benefits__layers {
+    max-width: 110px;
+  }
+
+  #es-garnier.es-garnier .es-benefits__txt {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  #es-garnier.es-garnier .es-benefits__txt span {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  /* #es-garnier.es-garnier .es-benefits__wrapper img {
+    
+    z-index: 0;
+    position: relative;
+  } */
+
+  /* #es-garnier.es-garnier .es-benefits__elipsa {
+    position: absolute;
+    z-index: -2;
+    width: 250px;
+    height: 250px;
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    bottom: -120px;
+    right: -100px;
+  } */
 
   #es-garnier.es-garnier .es-prepare {
     margin: 50px auto;
@@ -477,6 +542,7 @@
 
   #es-garnier.es-garnier .es-prepare__title {
     text-align: center;
+    font-family: "Montserrat";
     font-weight: 900;
     text-transform: uppercase;
     font-size: 20px;
@@ -543,6 +609,7 @@
   #es-garnier.es-garnier .es-eco__title {
     text-transform: uppercase;
     text-align: center;
+    font-family: "Montserrat";
     font-weight: 900;
     font-size: 18px;
     margin-bottom: 20px;
@@ -573,6 +640,7 @@
 
   #es-garnier.es-garnier .es-cross__title {
     text-align: center;
+    font-family: "Montserrat";
     font-weight: 900;
     text-transform: uppercase;
     font-size: 20px;
@@ -599,6 +667,7 @@
 
   #es-garnier.es-garnier .es-cross__name {
     text-align: center;
+    font-family: "Montserrat";
     font-weight: 700;
   }
 
@@ -620,6 +689,7 @@
 
   #es-garnier.es-garnier .es-cross__subtitle {
     text-align: center;
+    font-family: "Montserrat";
     font-weight: 700;
   }
 
@@ -1010,8 +1080,11 @@
           </div>
           <div class="es-benefits__effect">
             <div class="es-benefits__wrapper">
-              <img src="./img/products-img.png" alt="" />
-              <div class="es-benefits__elipsa"></div>
+              <div class="es-benefits__bg">
+                <img class="es-benefits__layers" src="./img/drop.png" alt="">
+                <p class="es-benefits__txt">MITRINA <span>10 SLĀŅU DZIĻUMĀ</span></p>
+              </div>
+              <!-- <div class="es-benefits__elipsa"></div> -->
             </div>
           </div>
         </div>
